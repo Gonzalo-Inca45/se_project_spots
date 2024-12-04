@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 12px;
 }
 
 .card__title {
@@ -33,7 +34,7 @@
 }
 
 .card__like-btn:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 @media screen and (max-width: 627px) {
