@@ -57,7 +57,7 @@
   line-height: 16px;
   flex: 0 0 auto;
   gap: 8px;
-  justify-content: center;
+  justify-content: start;
   cursor: pointer;
   color: #212121;
   opacity: 0.7;
@@ -84,6 +84,8 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .profile__add-btn:hover {
@@ -124,7 +126,5 @@
     margin: 0;
     max-width: 288px;
     width: 100%;
-    font-size: 16px;
-    line-height: 16px;
   }
 }
