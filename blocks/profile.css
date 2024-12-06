@@ -127,4 +127,9 @@
     max-width: 288px;
     width: 100%;
   }
+
+  .profile__edit-btn {
+    display: flex;
+    justify-content: center;
+  }
 }

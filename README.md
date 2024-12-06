@@ -19,4 +19,4 @@ Link to live view: https://gonzalo-inca45.github.io/se_project_spots/
 <img src="./images/Desktop.view.png" width="720">
 <img src="./images/mobile.view.png" width= "720"
 
-Link to project video recording: githttps://drive.google.com/file/d/1BmYRgjeHCeFTV3qC5tZactihxiTM3qqq/view?usp=drive_link
+Video: githttps://drive.google.com/file/d/1BmYRgjeHCeFTV3qC5tZactihxiTM3qqq/view?usp=drive_link
