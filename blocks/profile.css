@@ -55,9 +55,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  flex: 0 0 auto;
   gap: 8px;
-  justify-content: start;
+
   cursor: pointer;
   color: #212121;
   opacity: 0.7;
@@ -126,10 +125,5 @@
     margin: 0;
     max-width: 288px;
     width: 100%;
-  }
-
-  .profile__edit-btn {
-    display: flex;
-    justify-content: center;
   }
 }

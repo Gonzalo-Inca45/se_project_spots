@@ -21,4 +21,4 @@ Link to live view: https://gonzalo-inca45.github.io/se_project_spots/
 
 ## Video
 
-https://drive.google.com/file/d/1B8EVVrl4KI9CUj3HhywDi-e7xhdPC-2z/view?usp=drive_link
+[Project Video](https://drive.google.com/file/d/1B8EVVrl4KI9CUj3HhywDi-e7xhdPC-2z/view?usp=drive_link)
