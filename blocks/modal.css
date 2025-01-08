@@ -10,9 +10,10 @@
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  visibility: hidden;
 }
 
-.modal_opened {
+.modal__opened {
   visibility: visible;
 }
 
@@ -32,6 +33,7 @@
   height: 40px;
   width: 40px;
   opacity: 40%;
+  background-image: url(../images/Close\ Icon.svg);
 }
 
 .modal__opened {
