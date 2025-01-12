@@ -36,6 +36,11 @@
   width: 40px;
   opacity: 40%;
   background-image: url(../images/Close\ Icon.svg);
+  cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  opacity: 1;
 }
 
 .modal_opened {
@@ -79,12 +84,16 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 16px;
+  cursor: pointer;
+}
+
+.modal__submit-btn:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
-    /* max-width: 320px; */
   }
   .modal__container {
     padding: 12px;
@@ -103,6 +112,7 @@
     height: 40px;
     opacity: 40%;
     color: #ffffff;
+    cursor: pointer;
   }
 
   .modal__label {
