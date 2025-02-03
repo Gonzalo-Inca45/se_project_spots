@@ -28,6 +28,7 @@
 
 .modal__content_type_preview {
   padding: 0;
+  position: relative;
 }
 
 .modal__image {
@@ -35,6 +36,7 @@
   object-fit: contain;
   max-width: 80vw;
   max-height: 80vh;
+  border-radius: 8px;
 }
 
 .modal__close-btn {
@@ -46,12 +48,12 @@
   height: 40px;
   width: 40px;
   opacity: 40%;
-  background-image: url("../images/Close\ Icon.svg");
+  background-image: url("../images/close-icon.svg");
   cursor: pointer;
 }
 
-.modal__content_type_preview {
-  background-image: url("../images/Close.light.svg");
+.modal__close-btn_type_preview {
+  background-image: url("../images/Close-light.svg");
   top: 0;
   right: -12.5px;
   opacity: 1;
