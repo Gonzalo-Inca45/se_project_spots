@@ -73,12 +73,9 @@ function getCardElement(data) {
 
   cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
+    previewModalImageEl.src = data.link;
+    previewModalCaptionEl.textContent = data.name;
   });
-
-  cardImageEl.addEventListener("click", () => {});
-  openModal(previewModal);
-  previewModalImageEl.src = data.link;
-  previewModalCaptionEl.textContent = data.name;
 
   //add text content
   //add alt text
@@ -128,6 +125,11 @@ editModalCloseBtn.addEventListener("click", () => {
 cardButton.addEventListener("click", () => {
   openModal(cardModal);
 });
+
+cardModalCloseBtn.addEventListener("click", () => {
+  closeModal(cardModal);
+});
+
 previewCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
