@@ -56,14 +56,15 @@
   font-size: 16px;
   line-height: 16px;
   gap: 8px;
-
-  cursor: pointer;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   color: #212121;
+  cursor: pointer;
   opacity: 0.7;
 }
 
 .profile__edit-btn:hover {
-  opacity: 1;
+  color: #212121;
+  opacity: 100%;
 }
 
 .profile__add-btn {

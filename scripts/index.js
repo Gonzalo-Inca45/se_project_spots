@@ -62,11 +62,14 @@ function getCardElement(data) {
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
-
+  const cardDeleteBtn = cardElement.querySelector(".card__delete");
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
+  cardDeleteBtn.addEventListener("click", (evt) => {
+    evt.target.closest(".card").remove();
+  });
   cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-btn_liked");
   });
@@ -75,6 +78,7 @@ function getCardElement(data) {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
     previewModalCaptionEl.textContent = data.name;
+    previewModalImageEl.alt = data.name;
   });
 
   //add text content

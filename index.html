@@ -98,7 +98,6 @@
             Image link
             <input
               id="add-card-link-input"
-              type="text"
               class="modal__input"
               name="link"
               placeholder="Paste a link to the picture"
@@ -119,8 +118,11 @@
         </form>
       </div>
     </div>
-    <div class="modal modal_is-opened" id="preview-modal">
-      <div class="modal__content modal__content_type_preview">
+    <div
+      class="modal modal_type_image-preview modal_is-opened"
+      id="preview-modal"
+    >
+      <div class="modal__image-container">
         <button
           type="button"
           class="modal__close-btn modal__close-btn_type_preview"
@@ -128,7 +130,7 @@
         <img
           class="modal__image"
           src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
-          alt=""
+          alt="Golden bridge"
         />
         <p class="modal__caption"></p>
       </div>

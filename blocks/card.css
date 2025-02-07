@@ -57,7 +57,7 @@
 .card__delete {
   height: 32px;
   width: 32px;
-  background-image: url(../images/Delete\ Icon.svg);
+  background-image: url(../images/Delete-Icon.svg);
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
   border-radius: 50%;
@@ -67,11 +67,14 @@
   cursor: pointer;
 }
 
+.card__delete:hover {
+  background-color: #ff6565;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
   }
-
   .card__title {
     font-size: 16px;
     line-height: 16px;
