@@ -39,6 +39,9 @@
   opacity: 40%;
   cursor: pointer;
   background-repeat: no-repeat;
+  width: 23px;
+  height: 20px;
+  border: 2px;
 }
 
 .card__like-btn:hover {
@@ -62,7 +65,7 @@
   border: none;
   border-radius: 50%;
   position: absolute;
-  right: 10px;
+  left: 371px;
   top: 10px;
   cursor: pointer;
 }
@@ -82,5 +85,13 @@
   }
   .card {
     max-width: 288px;
+  }
+  .card__like-btn {
+    width: 20px;
+    height: 18px;
+    opacity: 40%;
+  }
+  .card__delete {
+    left: 246px;
   }
 }

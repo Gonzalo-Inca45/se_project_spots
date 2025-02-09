@@ -81,7 +81,7 @@ function getCardElement(data) {
     previewModalImageEl.alt = data.name;
   });
 
-  //add text content
+  //add text content22                                                                          e33edWS
   //add alt text
 
   return cardElement;
