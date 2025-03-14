@@ -57,13 +57,14 @@
   right: 50px;
   height: 40px;
   width: 40px;
-  opacity: 40%;
   background-image: url("../images/close-icon.svg");
   cursor: pointer;
 }
 
 .modal__close-btn:hover {
-  color: #212121;
+  color: rgba(33, 33, 33, 1);
+
+  border: 2px;
 }
 
 .modal__close-btn_type_preview {
@@ -113,10 +114,29 @@
   border: 1px solid rgba(33, 33, 33, 0.4);
   border-radius: 8px;
   color: #212121;
+  margin: 8px 0 0;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
 .modal__input:hover {
   border-color: rgba(33, 33, 33, 1);
+}
+
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  /*color and font*/
+  color: rgba(255, 0, 0, 0.7);
+  font-size: 16px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.modal__button_disabled {
+  opacity: 50%;
 }
 
 .modal__imput-filled {
@@ -127,7 +147,7 @@
   width: 156px;
   padding: 18px 0;
   border-radius: 8px;
-  background-color: #212121;
+  background-color: rgba(33, 33, 33, 1);
   color: #fcf5e5;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -136,7 +156,7 @@
 }
 
 .modal__submit-btn:hover {
-  opacity: 1;
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 .modal__caption {
@@ -147,7 +167,7 @@
   line-height: 24px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   width: 214px;
-  hieght: 32px;
+  height: 32px;
   padding: 4px 8px;
 }
 

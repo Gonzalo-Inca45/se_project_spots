@@ -1,3 +1,13 @@
+//pass settings object to the validation functions that are called in this file
+const config = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -40,6 +50,7 @@ const editModalDescriptionInput = editModal.querySelector(
 
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
+const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
@@ -81,9 +92,6 @@ function getCardElement(data) {
     previewModalImageEl.alt = data.name;
   });
 
-  //add text content22                                                                          e33edWS
-  //add alt text
-
   return cardElement;
 }
 
@@ -98,7 +106,6 @@ function closeModal(modal) {
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
 
-  //TODO make image appear when adding card
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editModal);
@@ -109,8 +116,8 @@ function handleAddCardSubmit(evt) {
   const name = cardNameInput.value;
   const link = cardLinkInput.value;
   const cardEl = getCardElement({ name, link });
+  disabledButton(cardSubmitBtn, config);
 
-  //TODO make sure card appears at the top of the list
   cardsList.prepend(cardEl);
 
   cardForm.reset();
@@ -120,6 +127,7 @@ function handleAddCardSubmit(evt) {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+
   openModal(editModal);
 });
 editModalCloseBtn.addEventListener("click", () => {
