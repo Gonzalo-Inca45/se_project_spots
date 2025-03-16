@@ -7,7 +7,7 @@ const settings = {
   errorClass: "modal__error_visible",
 };
 
-const showInputError = (formEl, inputEl, errorMsg) => {
+const showInputError = (formEl, inputEl, errorMsg, config) => {
   const erorrMsgID = inputEl.id + "-error";
   const errorMsgEl = formEl.querySelector("#" + erorrMsgID);
   errorMsgEl.textContent = errorMsg;
@@ -51,6 +51,17 @@ const disabledButton = (buttonEl, config) => {
   buttonEl.classList.add(config.inactiveButtonClass);
 };
 
+const resetValidation = (formEl, inputList, config) => {
+  inputList.forEach((input) => {
+    hideInputError(formEl, input);
+  });
+  toggleButtonState(
+    inputList,
+    formEl.querySelector(config.submitButtonSelector),
+    config
+  );
+};
+
 //use the settings object in all functions instead of hard-coded strings
 
 const setEventListeners = (formEl, config) => {
@@ -59,7 +70,6 @@ const setEventListeners = (formEl, config) => {
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
-      console.log(">>");
       checkInputValidity(formEl, inputElement, config);
       toggleButtonState(inputList, buttonElement, config);
     });
