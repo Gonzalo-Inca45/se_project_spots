@@ -1,5 +1,4 @@
-//pass settings object to the validation functions that are called in this file
-const config = {
+const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
@@ -111,14 +110,14 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  document.addEventListener("keyup", handleEscape);
+  document.removeEventListener("keyup", handleEscape);
 }
 
 modals.forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {
     if (
       evt.target.classList.contains("modal") ||
-      evt.target.classList.contains("modal__close")
+      evt.target.classList.contains("modal__close-btn")
     ) {
       closeModal(modal);
     }
@@ -138,7 +137,7 @@ function handleAddCardSubmit(evt) {
   const name = cardNameInput.value;
   const link = cardLinkInput.value;
   const cardEl = getCardElement({ name, link });
-  disabledButton(cardSubmitBtn, config);
+  disabledButton(cardSubmitBtn, settings);
 
   cardsList.prepend(cardEl);
 
@@ -153,20 +152,9 @@ profileEditButton.addEventListener("click", () => {
   resetValidation(editFormElement, inputList, settings);
   openModal(editModal);
 });
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
 
 cardButton.addEventListener("click", () => {
   openModal(cardModal);
-});
-
-cardModalCloseBtn.addEventListener("click", () => {
-  closeModal(cardModal);
-});
-
-previewCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
@@ -176,13 +164,3 @@ initialCards.forEach((item) => {
   const cardEl = getCardElement(item);
   cardsList.append(cardEl);
 });
-
-//cardModal.addEventListener("keydown", (e) => {
-// if (e.key == "Escape") {
-//if (e.target.classList.contains("modal_opened")) {
-//closeModal
-// console.log("closing the modal");
-// closeModal(cardModal);
-//}
-// }
-//});
