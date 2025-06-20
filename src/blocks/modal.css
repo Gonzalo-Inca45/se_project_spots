@@ -63,7 +63,6 @@
 
 .modal__close-btn:hover {
   color: rgba(33, 33, 33, 1);
-
   border: 2px;
 }
 
@@ -75,10 +74,6 @@
   color: #fff;
   border: none;
   border-radius: 8px;
-}
-
-.modal_opened {
-  visibility: visible;
 }
 
 .modal__title {
@@ -128,7 +123,6 @@
 .modal__error {
   display: block;
   margin-top: 8px;
-  /*color and font*/
   color: rgba(255, 0, 0, 0.7);
   font-size: 16px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -153,6 +147,7 @@
   font-size: 16px;
   line-height: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .modal__submit-btn:hover {
@@ -178,13 +173,11 @@
   .modal__container {
     padding: 12px;
   }
-
   .modal__title {
     font-size: 20px;
     line-height: 20px;
     margin: 10px 0 34px;
   }
-
   .modal__close-btn {
     top: 12px;
     right: 12px;
@@ -194,11 +187,9 @@
     color: #ffffff;
     cursor: pointer;
   }
-
   .modal__label {
     margin-bottom: 24px;
   }
-
   .modal__input {
     font-size: 16px;
     line-height: 16px;
@@ -215,22 +206,40 @@
     object-fit: contain;
     padding: 22px 12px 12px;
   }
-
   .modal__image {
     width: 100%;
     max-height: none;
     max-width: none;
   }
-
   .modal_type_image-preview {
     padding-left: 16px;
     padding-right: 16px;
   }
-
   .modal__caption {
     margin: 0;
   }
   .modal__close-btn_type_preview {
     top: -40px;
   }
+}
+
+.modal__submit-btn_type_delete {
+  background-color: rgba(255, 101, 101, 1);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.modal__submit-btn.modal__submit-btn_type_delete:hover {
+  background-color: rgba(255, 51, 51, 1);
+}
+
+.modal__submit-btn_type_cancel {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.modal__submit-btn.modal__submit-btn_type_cancel:hover {
+  background-color: rgba(33, 33, 33, 1);
+  color: rgba(255, 255, 255, 1);
 }
