@@ -4,12 +4,6 @@
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
-.profile {
-  display: flex;
-  padding: 34px 0 20px;
-  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
-}
-
 .profile__avatar-container {
   position: relative;
 }

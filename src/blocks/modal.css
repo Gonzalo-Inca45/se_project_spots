@@ -52,10 +52,11 @@
 
 .modal__close-btn {
   position: absolute;
+  color: rgba(255, 255, 255, 1);
   background-color: transparent;
-  border: none;
-  top: 32px;
-  right: 50px;
+  border: 2px;
+  top: -3px;
+  right: -50px;
   height: 40px;
   width: 40px;
   background-image: url("../images/close-icon.svg");
@@ -166,9 +167,9 @@
 }
 
 .modal__submit-btn.modal__submit-btn_type_delete:hover {
-  background-color: rgba(255, 51, 51, 1) !important;
-  color: #fff !important;
-  cursor: pointer !important;
+  background-color: rgba(255, 51, 51, 1);
+  color: #fff;
+  cursor: pointer;
 }
 
 .modal__submit-btn.modal__submit-btn_type_cancel {
@@ -179,9 +180,9 @@
 }
 
 .modal__submit-btn.modal__submit-btn_type_cancel:hover {
-  background-color: rgba(31, 31, 31, 1) !important;
-  color: rgba(255, 255, 255, 1) !important;
-  cursor: pointer !important;
+  background-color: rgba(31, 31, 31, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
 .modal__caption {

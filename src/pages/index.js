@@ -114,7 +114,7 @@ function getCardElement(data) {
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-  if (data.likes && data.likes.some((user) => user._id === currentUserId)) {
+  if (data.isLiked) {
     cardLikeBtn.classList.add("card__like-btn_active");
   }
 

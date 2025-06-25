@@ -24,16 +24,10 @@
           <div class="profile__avatar-container">
             <button class="profile__avatar-btn">
               <img
-                src="<%=require('./images/pencil-light.svg')%>"
+                src="<%=require('./images/pencil-light.svg')%>"`
                 alt="Pencil__icon"
-                class="profile__avatar"
               />
-            </button>
-            <img
-              src="<%=require('./images/avatar.jpg')%>"
-              alt="Bessie Coleman"
-              class="profile__avatar"
-            />
+            `
           </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
@@ -217,6 +211,12 @@
             class="modal__submit-btn modal__submit-btn_type_delete"
           >
             Delete
+          </button>
+          <button
+            type="button"
+            class="modal__submit-btn modal__submit-btn_type_cancel"
+          >
+            Cancel
           </button>
         </form>
       </div>
