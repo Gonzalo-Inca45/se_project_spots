@@ -48,12 +48,12 @@
   opacity: 1;
 }
 
-.card__like-btn_liked {
+.card__like-btn_active {
   background-image: url(../images/heart.liked.svg);
   opacity: 1;
 }
 
-.card__like-btn_liked:hover {
+.card__like-btn_active:hover {
   background-image: url(../images/heart.liked+hovered.svg);
 }
 

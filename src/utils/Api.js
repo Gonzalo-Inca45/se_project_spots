@@ -1,5 +1,3 @@
-// utils/Api.js
-
 class Api {
   constructor({ baseUrl, headers }) {
     this.baseUrl = baseUrl;
@@ -69,8 +67,11 @@ class Api {
     }).then(this._checkResponse);
   }
 
-  changeLikeCardStatus(id, isLiked) {
-    return isLiked ? this.addLike(id) : this.removeLike(id);
+  changeLikeCardStatus(cardId, isLiked) {
+    return fetch(`${this.baseUrl}/cards/${cardId}/likes`, {
+      method: isLiked ? "PUT" : "DELETE",
+      headers: this.headers,
+    }).then(this._checkResponse);
   }
 
   _checkResponse(res) {
