@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="decription" content="" />
+    <meta name="description" content="" />
     <meta name="author" content="Gonzalo Acha" />
     <meta name="keywords" content="HTML, CSS" />
 
@@ -22,12 +22,17 @@
       <main class="content">
         <section class="profile page__section">
           <div class="profile__avatar-container">
+            <img
+              class="profile__avatar"
+              src="<%=require('./images/avatar.jpg')%>"
+              alt="User avatar"
+            />
             <button class="profile__avatar-btn">
               <img
-                src="<%=require('./images/pencil-light.svg')%>"`
+                src="<%=require('./images/pencil-light.svg')%>"
                 alt="Pencil__icon"
               />
-            `
+            </button>
           </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
@@ -44,6 +49,7 @@
             New Post
           </button>
         </section>
+
         <section class="cards page__section">
           <ul class="cards__list">
             <template id="card-template">
@@ -64,6 +70,7 @@
           </ul>
         </section>
       </main>
+
       <footer class="footer">
         <p class="footer__copyright">2023 © Spots</p>
       </footer>
